@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+
+  
+  <title>Interactive card details form</title>
+
+</head>
+<body>
+
+  <button id="open">
+    Opciones
+  </button>
+  <div id="modal_container" class="modal-container">
+    <div class="modal">
+      <h1>ASPECTOS A TENER EN CUENTA</h1>
+        <p>
+          1-TODOS LOS CAMPOS DEBEN DE LLENARSE <br>
+          2-EL CAMPO CARD NUMBER NO ACEPTA LETRAS <br>
+          3-EL CAMPO MES COMPRENDE ENTRE 1 Y 12 <br>
+          4-EL CAMPO AÑO COMPRENDE ENTRE 2000 Y 3000 <br>
+          5-SI LA LONGITUD DE LOS CAMPOS ES SOBREPASADO, SEGUN EL EJEMPLO, NO VERÁS EL CAMPO <br>
+        </p>
+      <button id="close">Cerrar</button>
+    </div>
+  </div>
+
+  <img class="bg__main_desktop" src="./images/bg-main-desktop.png" alt="">
+
+  <div class="container__cards">
+
+    <span class="card_name"></span>
+
+    <span class="mes_card"></span>
+
+    <span class="year_card"></span>
+
+    <span class="card_number"></span>
+
+    <span class="cvc"></span>
+
+    <img class="bg_card_front" src="./images/bg-card-front.png" alt="">
+
+    <img class="bg_card_back" src="./images/bg-card-back.png" alt="">
+    
+
+  </div>
+
+  <div class="container__sucess">
+      <img src="./images/icon-complete.svg" alt="">
+      <h2>THANK YOU</h2>
+      <p>we´ve added you card details</p>
+      <button id="continue">Continue</button>
+  </div>
+
+  <form class="form__Card" action="">
+
+    <label for="">CARDHOLDER NAME</label>
+    <input id="card_value_name" type="text" placeholder="e.g Juan Pedro Ortega">
+    
+    
+    <label for="">CARD NUMBER</label>
+    <input id="card_value_number" type="number" placeholder="e.g 1234 1234 1234 1234">
+
+    <label for="">DATE.EXP (MM/YY)</label>
+
+    <div class="container_extrainfo">
+
+
+      <input id="card_value_mes" maxlength="2" type="number" placeholder="12">
+      <input id="card_value_year" maxlength="4" type="number" placeholder="2019">
+
+      <div class="container_cvc">
+        <label for="">CVC</label>
+        <input id="card_value_cvc" maxlength="3" type="number" placeholder="567">
+      </div>
+
+    </div>
+
+  </form>
+
+  <button class="btn__confirm" >Confirm</button>
+
+
+
+
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
